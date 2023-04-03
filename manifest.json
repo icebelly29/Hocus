@@ -1,0 +1,28 @@
+{
+    "name": "Hocus",
+    "version": "0.1.0",
+    "description": "Block distractions and focus effortlessly",
+    "permissions": ["tabs"],
+    "host_permissions": ["https://*.youtube.com/*"],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    
+    "content_script": [
+        {
+            "matches": ["https://*.youtube.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "web_accesible_resources":[
+        {
+            "resources":[
+                
+            ],
+            "matches":["https://*.youtube.com/*"]
+        }
+    ],
+    
+    "manifest_version": 3
+}
